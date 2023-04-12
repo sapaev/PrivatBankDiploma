@@ -1,5 +1,6 @@
 package tests;
 
+import PrivatBankPages.PrivatbankRate;
 import api.ApiHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import libs.LibsOfRate;
@@ -21,7 +22,7 @@ public class BaseTest {
 
     WebDriver driver;
 
-
+    PrivatbankRate privatbankRate;
     Logger logger = Logger.getLogger(getClass());
 
 
@@ -51,6 +52,7 @@ public class BaseTest {
         driver = initDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        privatbankRate=new PrivatbankRate(driver);
 
     }
 

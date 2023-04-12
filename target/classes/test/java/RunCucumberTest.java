@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         glue = "StepDefinitions",
-        tags = "@R001"
+        tags = "@R0029"
 )
 public class RunCucumberTest {
 }

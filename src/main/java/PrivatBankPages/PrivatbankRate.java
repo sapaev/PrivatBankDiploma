@@ -1,6 +1,7 @@
 package PrivatBankPages;
 
 
+import libs.LibsOfRate;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,18 +23,26 @@ public class PrivatbankRate {
 
    String buyCurrency="//td[@id='%s_buy']";
 
-   public String getSellCurrencyRate(String currency){
+
+
+   public void openPrivatBankPage(){
        driver.get("https://privatbank.ua/");
+   }
+
+
+
+   public String getSellCurrencyRate(String currency){
        isElementDisplayed(String.format(sellCurrency,currency));
        WebElement currencyElement= driver.findElement(By.xpath(String.format(sellCurrency,currency)));
+       LibsOfRate.sellCurrencyUI=currencyElement.getText();
        return currencyElement.getText();
    }
 
 
     public String getBuyCurrencyRate(String currency){
-        driver.get("https://privatbank.ua/");
         isElementDisplayed(String.format(buyCurrency,currency));
         WebElement currencyElement= driver.findElement(By.xpath(String.format(buyCurrency,currency)));
+        LibsOfRate.byeCurrencyUI=currencyElement.getText();
         return currencyElement.getText();
     }
 

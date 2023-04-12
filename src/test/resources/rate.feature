@@ -1,14 +1,15 @@
 Feature: User login
 
-  @R0018
-  Scenario Outline: R0018 Login with invalid login '<login>'
-    Given User opens 'Login' page
-    When User enters '<login>' login into 'Login' input on 'Login' page
-    And User enters '<password>' passWord into 'PassWord' input on 'Login' page
-    And User click on 'SingIn' button on 'Login' page
-    Then User sees alert message with text 'Invalid username / password.'
+  @R0029
+  Scenario Outline: R0029 Check rate of currency on 'PrivatbankRate' page
+    Given User opens 'PrivatbankRate' page
+    When The user sees the exchange rate of the currency <currencyOnUI> for sale on the page 'PrivatbankRate'
+    And The user sees the exchange rate of the currency <currencyOnUI> for purchase on the page 'PrivatbankRate'
+    And The user received the exchange rate of the currency <currencyOnAPI> for sale using the API
+    And The user received the exchange rate of the currency <currencyOnAPI> for a purchase using the API
+    Then The exchange rate for buying and selling currency <currencyOnUI> on the 'PrivatbankRate' page matches the exchange rate for <currencyOnAPI> by API
 
     Examples:
-      | login       | password    |
-      |wrong login  | 1234qwerty  |
-      |wrong login1 | 12dthhwerty |
+      | currencyOnUI | currencyOnAPI |
+      |USD           | USD           |
+      |EUR           | EUR           |

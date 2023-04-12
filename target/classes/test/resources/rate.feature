@@ -1,14 +1,14 @@
 Feature: User login
 
-  @R0018
-  Scenario Outline: R0018 Login with invalid login '<login>'
-    Given User opens 'Login' page
-    When User enters '<login>' login into 'Login' input on 'Login' page
-    And User enters '<password>' passWord into 'PassWord' input on 'Login' page
-    And User click on 'SingIn' button on 'Login' page
-    Then User sees alert message with text 'Invalid username / password.'
+  @R0029
+  Scenario Outline: R0029 Check rate of currency on 'PrivatbankRate' page
+    Given User opens 'PrivatbankRate' page
+    When User sees rate of currency '<currencyOnUI>'  on 'PrivatbankRate' page
+    And User opens 'PrivatbankRate' page
+    And User opens 'PrivatbankRate' page
+    Then User opens 'PrivatbankRate' page
 
     Examples:
-      | login       | password    |
-      |wrong login  | 1234qwerty  |
-      |wrong login1 | 12dthhwerty |
+      | currencyOnUI | password    |
+      |USD           | 1234qwerty  |
+      |EUR           | 12dthhwerty |
