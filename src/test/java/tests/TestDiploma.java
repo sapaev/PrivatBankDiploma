@@ -1,9 +1,4 @@
 package tests;
-
-
-
-
-
 import api.ApiHelper;
 import libs.LibsOfRate;
 import org.junit.Assert;

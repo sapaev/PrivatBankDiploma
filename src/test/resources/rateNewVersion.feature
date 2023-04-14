@@ -11,3 +11,4 @@ Feature: Check rate
     Examples:
       | currencyOnUI | currencyOnAPI |
       |USD           | USD           |
+      |EUR           | EUR           |
