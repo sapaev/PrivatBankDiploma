@@ -1,7 +1,7 @@
-Feature: User login
+Feature: Check rate
 
-  @R0029
-  Scenario Outline: R0029 Check rate of currency on 'PrivatbankRate' page
+  @R0030
+  Scenario Outline: R0030 Check rate of currency on 'PrivatbankRate' page
     Given User opens 'PrivatbankRate' page
     When The user sees the exchange rate of the currency '<currencyOnUI>' for sale on the page 'PrivatbankRate'
     And The user sees the exchange rate of the currency '<currencyOnUI>' for buy on the page 'PrivatbankRate'

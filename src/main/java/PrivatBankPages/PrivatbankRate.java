@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class PrivatbankRate {
     protected WebDriver driver;
@@ -30,7 +30,6 @@ public class PrivatbankRate {
    }
 
 
-
    public String getSellCurrencyRate(String currency){
        isElementDisplayed(String.format(sellCurrency,currency));
        WebElement currencyElement= driver.findElement(By.xpath(String.format(sellCurrency,currency)));
@@ -45,12 +44,6 @@ public class PrivatbankRate {
         LibsOfRate.byeCurrencyUI=currencyElement.getText();
         return currencyElement.getText();
     }
-
-
-
-
-
-
 
 
 

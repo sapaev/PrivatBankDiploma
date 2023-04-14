@@ -13,29 +13,10 @@ public class TestDiploma extends BaseTest{
 
 
 
-
-
-    @Test
-    public void writeRate(){
-       privatbankRate.openPrivatBankPage();
-        System.out.println(privatbankRate.getSellCurrencyRate("EUR"));
-        System.out.println(privatbankRate.getSellCurrencyRate("USD"));
-
-        System.out.println(privatbankRate.getBuyCurrencyRate("EUR"));
-        System.out.println(privatbankRate.getBuyCurrencyRate("USD"));
-
-
-        System.out.println("--------------"+LibsOfRate.byeCurrencyUI);
-        System.out.println("--------------"+LibsOfRate.sellCurrencyUI);
-    }
-
-
-
     @Test
     public void lastTest(){
         ApiHelper apiHelper=new ApiHelper();
-        apiHelper.getRateSellCurrency("USD");
-        apiHelper.getRateBuyCurrency("USD");
+        apiHelper.getRateBuyAndSellCurrency("USD");
 
         privatbankRate.openPrivatBankPage();
         privatbankRate.getBuyCurrencyRate("USD");

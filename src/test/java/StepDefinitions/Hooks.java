@@ -19,8 +19,6 @@ public class Hooks {
     public void setUp(){
       driverHelper.createWebDriver();
       logger.info("");
-      PrivatbankRate privatbankRate=new PrivatbankRate(DriverHelper.getWebDriver());
-      ApiHelper apiHelper=new ApiHelper();
     }
 
 
