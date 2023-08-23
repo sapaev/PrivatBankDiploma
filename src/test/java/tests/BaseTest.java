@@ -29,10 +29,15 @@ public class BaseTest {
     private WebDriver initDriver() {
         String browser = System.getProperty("browser");
         if ((browser == null) || "chrome".equalsIgnoreCase(browser)) {
+//            ChromeOptions ops = new ChromeOptions();
+//            ops.addArguments("--remote-allow-origins=*");
+//            WebDriverManager.chromedriver().setup();
+//            driver = new ChromeDriver(ops);
             ChromeOptions ops = new ChromeOptions();
             ops.addArguments("--remote-allow-origins=*");
-            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().browserVersion("91.0.4472.19").setup();
             driver = new ChromeDriver(ops);
+
         } else if ("firefox".equalsIgnoreCase(browser)) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
