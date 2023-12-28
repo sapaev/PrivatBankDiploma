@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class TestDiploma extends BaseTest{
 
-
+//попробовал перенести проект в другую папку
 
     @Test
     public void lastTest(){
